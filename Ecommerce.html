@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Shop</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('data:image/jpeg;base64,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');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+        }
+        header {
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 0 20px;
+            border-bottom: 1px solid white;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FF6347; /* Coral color */
+            text-shadow: 2px 2px 5px black;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+        nav ul li a {
+            margin: 0 10px;
+            padding: 8px 15px;
+            text-decoration: none;
+            color: white;
+            border: 2px solid white;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+        }
+        nav ul li a:hover {
+            background-color: #FF6347; /* Coral */
+            color: black;
+        }
+        nav ul li .signup {
+            background-color: #FF6347;
+            color: black;
+        }
+        nav ul li .signup:hover {
+            background-color: black;
+            color: white;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+        .planet-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            margin: 20px;
+            padding: 15px;
+            border-radius: 15px;
+            max-width: 350px;
+        }
+        .planet-card img {
+            max-width: 250px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px black;
+            animation: rotate 10s infinite linear; /* Rotation effect */
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .planet-info {
+            color: white;
+            text-align: center;
+        }
+        .price {
+            font-size: 1.5rem;
+            margin-top: 15px;
+        }
+        .add-to-cart {
+            background-color: #FF6347;
+            padding: 10px 20px;
+            color: black;
+            border-radius: 50px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .add-to-cart:hover {
+            background-color: black;
+            color: white;
+            border: 2px solid #FF6347;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Planet Shop</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Buy Now</a></li>
+                <li><a href="#">Sell Now</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#" class="signup">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="planet-card">
+            <img src="mercury.jpeg" alt="Mercury" />
+            <div class="planet-info">
+                <h2>Mercury</h2>
+                <p>The closest planet to the Sun, Mercury is a scorching world of extremes.</p>
+                <div class="price">Price: $100,000,000</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        
+        <div class="planet-card">
+            <img src="venus.jpeg" alt="Venus" />
+            <div class="planet-info">
+                <h2>Venus</h2>
+                <p>Venus, the second planet from the Sun, with its toxic atmosphere and high temperatures.</p>
+                <div class="price">Price: $95,000,000</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        
+        <div class="planet-card">
+            <img src="earth.jpeg" alt="Earth" />
+            <div class="planet-info">
+                <h2>Earth</h2>
+                <p>The only known planet to support life, Earth is a blue gem.</p>
+                <div class="price">Price: $200,000,000</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        
+        <div class="planet-card">
+            <img src="mars.jpeg" alt="Mars" />
+            <div class="planet-info">
+                <h2>Mars</h2>
+                <p>The Red Planet, full of potential for future human exploration.</p>
+                <div class="price">Price: $120,000,000</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
